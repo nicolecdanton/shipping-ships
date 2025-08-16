@@ -11,6 +11,13 @@ const database = {
         { id: 3, name: "Nebula Carrier", cargoId: 103 },
         { id: 4, name: "Asteroid Runner", cargoId: 104 },
         { id: 5, name: "Solar Freighter", cargoId: 105 }
+],
+    shippingShips: [
+        { id: 1, name: "SS Horizon" },
+        { id: 2, name: "Ocean Crest" },
+        { id: 3, name: "Wave Breaker" },
+        { id: 4, name: "Harbor Queen" },
+        { id: 5, name: "Blue Mariner" }
 ]}
 
 
@@ -22,4 +29,9 @@ export const getDocks = () => {
 export const getHaulingShips = () => {
     const haulersArray = structuredClone(database.haulers)
     return haulersArray
+}
+
+export const getShippingShips = () => {
+    const shippingShipsArray = structuredClone(database.shippingShips)
+    return shippingShipsArray
 }
