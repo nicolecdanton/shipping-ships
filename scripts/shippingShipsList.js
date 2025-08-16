@@ -3,6 +3,14 @@ import { getHaulingShips, getShippingShips } from "./database.js"
 
 export const shippingShipsList = () => {
     const shippingShips = getShippingShips()
+    //alphabetize shippingShips by name
+    shippingShips.sort((a, b) => {
+        const nameA = a.name.toUpperCase(); // ignore case
+        const nameB = b.name.toUpperCase(); // ignore case
+        if (nameA < nameB) return -1;
+        if (nameA > nameB) return 1;
+        return 0;
+    });
     let shippingShipsHTML = "<ul>"
 
     for (const ship of shippingShips) {

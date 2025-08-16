@@ -3,6 +3,14 @@ import { getDocks, getHaulingShips } from "./database.js"
 
 export const DockList = () => {
     const docks = getDocks()
+    //alphabetize Docks by location
+    docks.sort((a, b) => {
+        const nameA = a.location.toUpperCase(); // ignore case
+        const nameB = b.location.toUpperCase(); // ignore case
+        if (nameA < nameB) return -1;
+        if (nameA > nameB) return 1;
+        return 0;
+    });
     let docksHTML = "<ul>"
 
     for (const dock of docks) {

@@ -10,15 +10,15 @@ const applicationHTML = `
 
 
 <article class="details">
-    <section class="detail--haulers">
+    <section class="column">
         <h2>Hauling Ships</h2>
         ${HaulerList()}
     </section>
-    <section class="detail--shippingships">
+    <section class="column">
         <h2>Shipping Ships</h2>
         ${shippingShipsList()}
     </section>
-    <section class="detail--docks">
+    <section class="column">
         <h2>Docks</h2>
         ${DockList()}
     </section>
