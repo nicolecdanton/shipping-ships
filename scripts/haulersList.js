@@ -7,9 +7,9 @@ export const HaulerList = () => {
 
     for (const hauler of haulers) {
         haulersHTML += `<li data-haulerid="${hauler.id}"
-                            data-cargoforeignkey="${hauler.cargoId}"> 
-        ${hauler.name}
-        </li>`
+                            data-dockforeignkey="${hauler.dockoId}"> 
+                            ${hauler.name}
+                         </li>`
     }
 
     haulersHTML += "</ul>"

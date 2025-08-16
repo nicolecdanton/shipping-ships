@@ -9,7 +9,6 @@ export const DockList = () => {
         docksHTML += `<li data-dockid="${dock.id}"> 
         ${dock.location} can hold ${dock.volume} of cargo
         </li>`
-        // Convert each dock object to an <li> and append to the docksHTML string
     }
 
     docksHTML += "</ul>"
